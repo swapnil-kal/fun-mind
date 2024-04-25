@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_COMPOSE = '/usr/bin/docker-compose'
+        DOCKER_COMPOSE = '/usr/local/bin/docker-compose'
         DOCKER_COMPOSE_FILE = 'compose.yaml'
     }
 
