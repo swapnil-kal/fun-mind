@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     // Build and deploy containers
-                    def buildResult = sh(script: "docker-compose -f ${DOCKER_COMPOSE_FILE} up -d --build", returnStatus: true)
+                    def buildResult = sh(script: "docker compose -f ${DOCKER_COMPOSE_FILE} up -d --build", returnStatus: true)
                     if (buildResult == 0) {
                         echo 'Docker Compose build and deploy succeeded!'
                     } else {
