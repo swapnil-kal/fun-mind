@@ -1,0 +1,134 @@
+{
+	"Routes": [
+		{
+			// Content API 
+			"UpstreamPathTemplate": "/subCategory/{id}",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/subCategory/{id}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/subCategory/create",
+			"UpstreamHttpMethod": [ "Post" ],
+			"DownstreamPathTemplate": "/api/subCategory/create",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/subCategory/update/{id}",
+			"UpstreamHttpMethod": [ "Put" ],
+			"DownstreamPathTemplate": "/api/subCategory/update/{id}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/kidsContent/create",
+			"UpstreamHttpMethod": [ "Post" ],
+			"DownstreamPathTemplate": "/api/kidsContent/create",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/kidsContent/update/{id}",
+			"UpstreamHttpMethod": [ "Put" ],
+			"DownstreamPathTemplate": "/api/kidsContent/update/{id}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/kidsContent/category/{categoryId}",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/kidsContent/category/{categoryId}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/kidsContent/subCategory/{subCategoryId}",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/kidsContent/subCategory/{subCategoryId}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/kidsContent/download/{contentId}/{documentId}",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/kidsContent/download/{contentId}/{documentId}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/kidsContent/{id}",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/kidsContent/{id}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		}
+	],
+	"SwaggerEndPoints": [
+		{
+			"Key": "contentAPI",
+			"Config": [
+				{
+					"Name": "Content API",
+					"Version": "v1",
+					"Url": "http://localhost:7057/swagger/v1/swagger.json"
+				}
+			]
+		}
+	]
+}

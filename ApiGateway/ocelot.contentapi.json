@@ -1,0 +1,69 @@
+{
+	"Routes": [
+		{
+			"UpstreamPathTemplate": "/content/weatherForecast",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/WeatherForecast",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		},
+		{			
+			"UpstreamPathTemplate": "/subCategory/{id}",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/subCategory/{id}",
+			"DownstreamScheme": "https",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/subCategory/create",
+			"UpstreamHttpMethod": [ "Post" ],
+			"DownstreamPathTemplate": "/api/subCategory/create",
+			"DownstreamScheme": "https",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/subCategory/update/{id}",
+			"UpstreamHttpMethod": [ "Put" ],
+			"DownstreamPathTemplate": "/api/subCategory/update/{id}",
+			"DownstreamScheme": "https",
+			"SwaggerKey": "contentAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7015
+				}
+			]
+		}
+
+	],
+	"SwaggerEndPoints": [
+		{
+			"Key": "contentAPI",
+			"Config": [
+				{
+					"Name": "Content API",
+					"Version": "v1",
+					"Url": "http://localhost:7015/swagger/v1/swagger.json"
+				}
+			]
+		}
+	]
+}

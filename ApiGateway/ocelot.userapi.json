@@ -1,0 +1,236 @@
+{
+	"Routes": [
+		{
+			"UpstreamPathTemplate": "/weatherForecast",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/WeatherForecast",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/user/{id}",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/User/{id}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/auth/login",
+			"UpstreamHttpMethod": [ "Post" ],
+			"DownstreamPathTemplate": "/api/auth/login",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/auth/register",
+			"UpstreamHttpMethod": [ "Post" ],
+			"DownstreamPathTemplate": "/api/auth/register",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/auth/resetPassword/sendOTP",
+			"UpstreamHttpMethod": [ "Post" ],
+			"DownstreamPathTemplate": "/api/auth/resetPassword/sendOTP",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/auth/resetPassword/verifyOTP",
+			"UpstreamHttpMethod": [ "Post" ],
+			"DownstreamPathTemplate": "/api/auth/resetPassword/verifyOTP",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/auth/resetPassword",
+			"UpstreamHttpMethod": [ "Post" ],
+			"DownstreamPathTemplate": "/api/auth/resetPassword",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/user/create",
+			"UpstreamHttpMethod": [ "Post" ],
+			"DownstreamPathTemplate": "/api/user/create",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/user/update/{userId}",
+			"UpstreamHttpMethod": [ "Put" ],
+			"DownstreamPathTemplate": "/api/user/update/{userId}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/ageGroup/all",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/ageGroup/all",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/ageGroup/{id}",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/ageGroup/{id}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/category/all",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/category/all",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/category/{id}",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/category/{id}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/assignCategories/{ageGroupId}",
+			"UpstreamHttpMethod": [ "Post" ],
+			"DownstreamPathTemplate": "/api/categoryAgeMapping/assignCategories/{ageGroupId}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/categoryAgeMapping/{ageGroupId}",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/categoryAgeMapping/all/{ageGroupId}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/createUpdateProfile/{userId}",
+			"UpstreamHttpMethod": [ "Post" ],
+			"DownstreamPathTemplate": "/api/userProfile/update/{userId}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		},
+		{
+			"UpstreamPathTemplate": "/userProfile/{userId}",
+			"UpstreamHttpMethod": [ "Get" ],
+			"DownstreamPathTemplate": "/api/userProfile/{userId}",
+			"DownstreamScheme": "http",
+			"SwaggerKey": "userAPI",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7057
+				}
+			]
+		}
+	],
+	"SwaggerEndPoints": [
+		{
+			"Key": "userAPI",
+			"Config": [
+				{
+					"Name": "Users API",
+					"Version": "v1",
+					"Url": "http://localhost:7057/swagger/v1/swagger.json"
+				}
+			]
+		}
+	]
+}
