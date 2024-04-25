@@ -1,0 +1,47 @@
+services:
+  db:
+    image: mysql:8.3.0
+    hostname: db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Tech8092
+      MYSQL_DATABASE: edutech_accountDB
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root --password=Tech8092"]
+      interval: 7s
+      timeout: 15s
+      retries: 6
+    ports:
+      - 3306:3306
+    networks:
+      - spin-off-backend
+    volumes:
+      - db-data:/var/lib/mysql
+
+  mongodb:
+    image: mongo:latest
+    container_name: edutech-mongodb
+    hostname: localhost
+    command: >
+      bash -c "apt-get update && apt-get install -y && exec mongod --bind_ip_all"
+    environment:
+      MONGO_INITDB_DATABASE: EdutechContentDB
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - spin-off-backend
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --eval 'db.runCommand({ ping: 1 })'"]
+      interval: 10s
+      timeout: 50s  # Increase the timeout if necessary
+      retries: 6
+
+
+networks:
+  spin-off-backend:
+
+volumes:
+  db-data:
+  mongodb_data:

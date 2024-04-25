@@ -1,0 +1,41 @@
+services:
+  apigateway:
+    build:
+      context: ./ApiGateway
+      target: final
+    restart: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: QA
+    ports:
+      - 8080:8080
+    networks:
+      - spin-off-backend
+
+  userapi:
+    build:
+      context: ./User.Api
+      target: final
+    restart: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: QA
+    ports:
+      - 7057:8080
+    networks:
+      - spin-off-backend
+
+  contentapi:
+    build:
+      context: ./Content.Api
+      target: final
+    restart: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: QA
+    ports:
+      - 8090:8080
+    networks:
+      - spin-off-backend
+    volumes:
+      - /var:/var
+
+networks:
+  spin-off-backend:
